@@ -407,3 +407,115 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguardia Tecnológica Pro | Software Catalog</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(-45deg, #060913, #0b1120, #161233, #02040a);
+            --card-bg: rgba(22, 32, 51, 0.6);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-sw: #4ade80;
+            --border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-gradient); color: var(--text-main); min-height: 100vh; padding: 3rem 1.5rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.8rem; }
+        
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        
+        .card-image-container { 
+            width: 100%; height: 150px; border-radius: 10px; margin-bottom: 1.2rem;
+            background: rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .card-image-container img { max-width: 70%; max-height: 70%; object-fit: contain; }
+        
+        .card-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--accent-sw); background: rgba(74, 222, 128, 0.15); padding: 0.3rem 0.7rem; border-radius: 8px; width: fit-content; margin-bottom: 1rem; }
+        .card h3 { font-size: 1.35rem; margin-bottom: 0.8rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <div class="card-badge">Entorno</div>
+            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFI-pniSXDIyK76qQHOH1vxs18YxVa_-tYLe7w1blL2g&s=10" alt="VS Code"></div>
+            <h3>Visual Studio Code</h3>
+            <p>Editor extensible multiplataforma para desarrollo moderno.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Infraestructura</div>
+            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJDfHODa-NkOSEyLqy3BfFb_n7BZYC4cWnvw2POBW5g&s=10" alt="Docker"></div>
+            <h3>Docker & Kubernetes</h3>
+            <p>Automatización de contenedores y microservicios.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Asistente IA</div>
+            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTH1WX9oe9ojmJmaATQtHIxtQcWougov1sZ9aD7t7Og&s=10" alt="Cursor"></div>
+            <h3>Cursor AI</h3>
+            <p>IDE con IA profunda integrada localmente.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Diseño</div>
+            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLByr5oMJbeROvPhUgh_TpfRT1v3Zi9RuYjGcVMLmlPA&s=10" alt="Figma"></div>
+            <h3>Figma</h3>
+            <p>Herramienta colaborativa de diseño de interfaces.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Base de Datos</div>
+            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLTV_h9u9QfAf3qIWiLuX2wWRpyqaGOKxqvdxJc7jWeg&s=10" alt="PostgreSQL"></div>
+            <h3>PostgreSQL 17</h3>
+            <p>Sistema de gestión de bases de datos relacionales.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Framework</div>
+            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Next.js"></div>
+            <h3>Next.js 15</h3>
+            <p>Framework React para renderizado híbrido.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Gráficos 3D</div>
+            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Blender"></div>
+            <h3>Blender 4.x</h3>
+            <p>Suite de creación 3D de código abierto.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Plataforma</div>
+            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Linux"></div>
+            <h3>Ubuntu Server</h3>
+            <p>Sistema operativo robusto para servidores.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Modelado IA</div>
+            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Claude"></div>
+            <h3>Claude 3.5</h3>
+            <p>Modelo de lenguaje avanzado para razonamiento.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-badge">Organización</div>
+            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Obsidian"></div>
+            <h3>Obsidian</h3>
+            <p>Gestor de conocimiento basado en Markdown.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
