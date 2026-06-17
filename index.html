@@ -169,10 +169,10 @@
         .card.hardware:hover { transform: translateY(-6px); border-color: var(--accent-hw); box-shadow: 0 10px 25px var(--accent-hw-glow); }
         .card.software:hover { transform: translateY(-6px); border-color: var(--accent-sw); box-shadow: 0 10px 25px var(--accent-sw-glow); }
 
-        /* Contenedor adaptado para Iconos */
+        /* Contenedor adaptado para Imágenes reales */
         .card-image-container {
             width: 100%;
-            height: 150px;
+            height: 160px;
             border-radius: 10px;
             margin-bottom: 1.2rem;
             background: rgba(0, 0, 0, 0.2);
@@ -180,17 +180,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .laptops .card-image-container { color: var(--accent-lp); text-shadow: 0 0 15px var(--accent-lp-glow); }
-        .hardware .card-image-container { color: var(--accent-hw); text-shadow: 0 0 15px var(--accent-hw-glow); }
-        .software .card-image-container { color: var(--accent-sw); text-shadow: 0 0 15px var(--accent-sw-glow); }
+        .card-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
 
-        .card:hover .card-image-container {
-            transform: scale(1.03);
-            background: rgba(0, 0, 0, 0.4);
+        .card:hover .card-image-container img {
+            transform: scale(1.06);
         }
 
         .card-badge {
@@ -206,16 +208,17 @@
             z-index: 2;
         }
 
-        .laptops .card-badge { background: rgba(191, 85, 236, 0.15); color: var(--accent-lp); backdrop-filter: blur(4px); }
-        .hardware .card-badge { background: rgba(0, 242, 254, 0.15); color: var(--accent-hw); backdrop-filter: blur(4px); }
-        .software .card-badge { background: rgba(74, 222, 128, 0.15); color: var(--accent-sw); backdrop-filter: blur(4px); }
+        .laptops .card-badge { background: rgba(191, 85, 236, 0.65); color: var(--text-main); backdrop-filter: blur(4px); }
+        .hardware .card-badge { background: rgba(0, 242, 254, 0.65); color: #02040a; backdrop-filter: blur(4px); }
+        .software .card-badge { background: rgba(74, 222, 128, 0.65); color: #02040a; backdrop-filter: blur(4px); }
 
         .card-number {
             font-family: monospace;
             font-size: 1.2rem;
             font-weight: bold;
-            opacity: 0.15;
+            opacity: 0.25;
             margin-bottom: 0.5rem;
+            color: var(--text-muted);
         }
 
         .card h3 {
@@ -286,7 +289,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Ultrabook</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-laptop"></i>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop&q=60" alt="MacBook Pro M4 Max">
             </div>
             <div class="card-number">LP // 01</div>
             <h3>MacBook Pro M4 Max</h3>
@@ -296,7 +299,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Gaming Pro</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-gamepad"></i>
+                <img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?w=500&auto=format&fit=crop&q=60" alt="ASUS ROG Zephyrus G16">
             </div>
             <div class="card-number">LP // 02</div>
             <h3>ASUS ROG Zephyrus G16</h3>
@@ -306,7 +309,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Productividad</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-pen-nib"></i>
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop&q=60" alt="Dell XPS 14 Pro">
             </div>
             <div class="card-number">LP // 03</div>
             <h3>Dell XPS 14 Pro</h3>
@@ -316,7 +319,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Empresarial</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-briefcase"></i>
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format&fit=crop&q=60" alt="Lenovo ThinkPad X1 Carbon">
             </div>
             <div class="card-number">LP // 04</div>
             <h3>Lenovo ThinkPad X1 Carbon</h3>
@@ -326,7 +329,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Gaming Premium</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-gem"></i>
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&auto=format&fit=crop&q=60" alt="Razer Blade 16">
             </div>
             <div class="card-number">LP // 05</div>
             <h3>Razer Blade 16</h3>
@@ -336,7 +339,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Copilot+ PC</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-brain"></i>
+                <img src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=500&auto=format&fit=crop&q=60" alt="HP OmniBook X">
             </div>
             <div class="card-number">LP // 06</div>
             <h3>HP OmniBook X</h3>
@@ -346,7 +349,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Calidad / Precio</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-scale-balanced"></i>
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=60" alt="Lenovo Legion Pro 5">
             </div>
             <div class="card-number">LP // 07</div>
             <h3>Lenovo Legion Pro 5</h3>
@@ -356,7 +359,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">2 en 1</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-tablet-screen-button"></i>
+                <img src="https://images.unsplash.com/photo-1515248137880-45e105b710e0?w=500&auto=format&fit=crop&q=60" alt="Microsoft Surface Pro 11">
             </div>
             <div class="card-number">LP // 08</div>
             <h3>Microsoft Surface Pro 11</h3>
@@ -366,7 +369,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Desarrollo</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-cubes"></i>
+                <img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?w=500&auto=format&fit=crop&q=60" alt="Framework Laptop 16">
             </div>
             <div class="card-number">LP // 09</div>
             <h3>Framework Laptop 16</h3>
@@ -376,7 +379,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Creadores</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-palette"></i>
+                <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=500&auto=format&fit=crop&q=60" alt="ASUS ProArt P16">
             </div>
             <div class="card-number">LP // 10</div>
             <h3>ASUS ProArt P16</h3>
@@ -387,7 +390,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">GPU</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-microchip"></i>
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&auto=format&fit=crop&q=60" alt="NVIDIA GeForce RTX 5090">
             </div>
             <div class="card-number">HW // 01</div>
             <h3>NVIDIA GeForce RTX 5090</h3>
@@ -397,17 +400,17 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">CPU</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-server"></i>
+                <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=500&auto=format&fit=crop&q=60" alt="AMD Ryzen 9 9950X">
             </div>
             <div class="card-number">HW // 02</div>
             <h3>AMD Ryzen 9 9950X</h3>
-            <p>Procesamiento nativo Zen 5 enfocado a la computación en paralelo paralela, diseño estructural tridimensional y compilaciones de código complejas.</p>
+            <p>Procesamiento nativo Zen 5 enfocado a la computación paralela, diseño estructural tridimensional y compilaciones de código complejas.</p>
         </div>
 
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">SoC / ARM</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-circle-nodes"></i>
+                <img src="https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=500&auto=format&fit=crop&q=60" alt="Apple M4 Ultra">
             </div>
             <div class="card-number">HW // 03</div>
             <h3>Apple M4 Ultra</h3>
@@ -417,7 +420,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">CPU</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-bolt"></i>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop&q=60" alt="Intel Core Ultra 9 285K">
             </div>
             <div class="card-number">HW // 04</div>
             <h3>Intel Core Ultra 9 285K</h3>
@@ -427,7 +430,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Almacenamiento</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-database"></i>
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop&q=60" alt="Samsung 990 PRO Eco">
             </div>
             <div class="card-number">HW // 05</div>
             <h3>Samsung 990 PRO Eco</h3>
@@ -437,7 +440,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Visualización</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-desktop"></i>
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop&q=60" alt="ASUS ROG Swift OLED">
             </div>
             <div class="card-number">HW // 06</div>
             <h3>ASUS ROG Swift OLED</h3>
@@ -447,7 +450,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Procesador ARM</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-wave-square"></i>
+                <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=500&auto=format&fit=crop&q=60" alt="Qualcomm Snapdragon X Elite">
             </div>
             <div class="card-number">HW // 07</div>
             <h3>Qualcomm Snapdragon X Elite</h3>
@@ -457,7 +460,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Computación Espacial</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-vr-cardboard"></i>
+                <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=500&auto=format&fit=crop&q=60" alt="Meta Quest 3S">
             </div>
             <div class="card-number">HW // 08</div>
             <h3>Meta Quest 3S</h3>
@@ -467,7 +470,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Microordenador</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-network-wired"></i>
+                <img src="https://images.unsplash.com/photo-1602546001771-e1488996e40e?w=500&auto=format&fit=crop&q=60" alt="Raspberry Pi 5">
             </div>
             <div class="card-number">HW // 09</div>
             <h3>Raspberry Pi 5 (16GB)</h3>
@@ -477,7 +480,7 @@
         <div class="card hardware" data-type="hardware">
             <div class="card-badge">Memoria RAM</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-memory"></i>
+                <img src="https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?w=500&auto=format&fit=crop&q=60" alt="Corsair Dominator DDR5">
             </div>
             <div class="card-number">HW // 10</div>
             <h3>Corsair Dominator DDR5</h3>
@@ -488,7 +491,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Entorno</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-code"></i>
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&auto=format&fit=crop&q=60" alt="Visual Studio Code">
             </div>
             <div class="card-number">SW // 01</div>
             <h3>Visual Studio Code</h3>
@@ -498,7 +501,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Infraestructura</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-box-open"></i>
+                <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=500&auto=format&fit=crop&q=60" alt="Docker & Kubernetes">
             </div>
             <div class="card-number">SW // 02</div>
             <h3>Docker & Kubernetes</h3>
@@ -508,7 +511,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Asistente IA</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-robot"></i>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?w=500&auto=format&fit=crop&q=60" alt="Cursor AI">
             </div>
             <div class="card-number">SW // 03</div>
             <h3>Cursor AI</h3>
@@ -518,7 +521,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Diseño</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-bezier-curve"></i>
+                <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500&auto=format&fit=crop&q=60" alt="Figma">
             </div>
             <div class="card-number">SW // 04</div>
             <h3>Figma</h3>
@@ -528,7 +531,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Base de Datos</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-table"></i>
+                <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop&q=60" alt="PostgreSQL 17">
             </div>
             <div class="card-number">SW // 05</div>
             <h3>PostgreSQL 17</h3>
@@ -538,7 +541,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Framework</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-layer-group"></i>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60" alt="Next.js 15">
             </div>
             <div class="card-number">SW // 06</div>
             <h3>Next.js 15</h3>
@@ -548,7 +551,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Gráficos 3D</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-cube"></i>
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60" alt="Blender 4.x">
             </div>
             <div class="card-number">SW // 07</div>
             <h3>Blender 4.x</h3>
@@ -558,7 +561,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Plataforma</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-terminal"></i>
+                <img src="https://images.unsplash.com/photo-1629654294861-76429a28242a?w=500&auto=format&fit=crop&q=60" alt="Fedora / Ubuntu Server">
             </div>
             <div class="card-number">SW // 08</div>
             <h3>Fedora / Ubuntu Server</h3>
@@ -568,7 +571,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Modelado IA</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-gears"></i>
+                <img src="https://images.unsplash.com/photo-1684369175833-31742407542d?w=500&auto=format&fit=crop&q=60" alt="Claude 3.5 Sonnet">
             </div>
             <div class="card-number">SW // 09</div>
             <h3>Claude 3.5 Sonnet</h3>
@@ -578,7 +581,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Organización</div>
             <div class="card-image-container">
-                <i class="fa-solid fa-book-open"></i>
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=500&auto=format&fit=crop&q=60" alt="Obsidian">
             </div>
             <div class="card-number">SW // 10</div>
             <h3>Obsidian</h3>
@@ -594,7 +597,6 @@
 </div>
 
 <script>
-    // Todo el código interactivo se ejecuta de forma segura tras cargar el DOM
     document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('search-input');
         const filterButtons = document.querySelectorAll('.btn');
@@ -649,7 +651,6 @@
             });
         });
 
-        // Ejecución inicial de filtrado
         filterTech();
     });
 </script>
