@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -189,12 +190,12 @@
         }
 
         .software .card-image-container {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(15, 23, 42, 0.8);
         }
         
         .software .card-image-container img {
             object-fit: contain;
-            padding: 1.8rem;
+            padding: 2rem;
         }
 
         .card:hover .card-image-container img {
@@ -222,4 +223,433 @@
             font-family: monospace;
             font-size: 1.2rem;
             font-weight: bold;
-            opacity: 0.15
+            opacity: 0.15;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        #no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            display: none;
+            width: 100%;
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Vanguardia Tecnológica</h1>
+        <p>Explora de forma interactiva nuestro catálogo técnico especializado: Computadoras portátiles de alto rendimiento, componentes de hardware avanzados y herramientas esenciales de desarrollo de software.</p>
+    </header>
+
+    <div class="controls-panel">
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">Todo</button>
+            <button class="btn" data-filter="laptops">💻 Laptops</button>
+            <button class="btn" data-filter="hardware">⚙️ Hardware</button>
+            <button class="btn" data-filter="software">🛠️ Software</button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar laptop, componente o herramienta...">
+        </div>
+    </div>
+
+    <div class="grid" id="tech-grid">
+        
+        <div id="no-results">No se encontraron elementos que coincidan con tu búsqueda.</div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Ultrabook</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500&auto=format&fit=crop" alt="MacBook Pro M4 Max">
+            </div>
+            <div class="card-number">LP // 01</div>
+            <h3>MacBook Pro M4 Max</h3>
+            <p>Estación de trabajo ultraportátil optimizada para renderizado masivo, flujos de desarrollo complejos y una eficiencia energética de nivel superior en arquitectura ARM.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Gaming Pro</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=500&auto=format&fit=crop" alt="ASUS ROG Zephyrus G16">
+            </div>
+            <div class="card-number">LP // 02</div>
+            <h3>ASUS ROG Zephyrus G16</h3>
+            <p>Portátil gaming de alta gama equipado con gráficos dedicados de última generación, pantalla OLED de nivel competitivo y un chasis de aluminio mecanizado.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Productividad</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=500&auto=format&fit=crop" alt="Dell XPS 14 Pro">
+            </div>
+            <div class="card-number">LP // 03</div>
+            <h3>Dell XPS 14 Pro</h3>
+            <p>Diseño industrial minimalista con pantalla InfinityEdge de alta resolución, enfocado en creadores de contenido y profesionales que requieren máxima fidelidad de color.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Empresarial</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=500&auto=format&fit=crop" alt="Lenovo ThinkPad X1 Carbon">
+            </div>
+            <div class="card-number">LP // 04</div>
+            <h3>Lenovo ThinkPad X1 Carbon</h3>
+            <p>El estándar de la industria en seguridad corporativa y durabilidad estructural, construido en fibra de carbono con teclado ergonómico de alta respuesta.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Gaming Premium</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?q=80&w=500&auto=format&fit=crop" alt="Razer Blade 16">
+            </div>
+            <div class="card-number">LP // 05</div>
+            <h3>Razer Blade 16</h3>
+            <p>Rendimiento gráfico extremo sin comprometer el grosor, integrando un panel Dual-Mode Mini-LED capaz de alternar resoluciones según la carga de trabajo.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Copilot+ PC</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=500&auto=format&fit=crop" alt="HP OmniBook X">
+            </div>
+            <div class="card-number">LP // 06</div>
+            <h3>HP OmniBook X</h3>
+            <p>Nueva generación de portátiles inteligentes impulsados por procesadores Snapdragon ARM con acelerador neuronal NPU dedicado a tareas de inteligencia artificial nativa.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Calidad / Precio</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?q=80&w=500&auto=format&fit=crop" alt="Lenovo Legion Pro 5">
+            </div>
+            <div class="card-number">LP // 07</div>
+            <h3>Lenovo Legion Pro 5</h3>
+            <p>Equilibrio térmico avanzado Coldfront y procesamiento híbrido de alto rendimiento adaptado para multitarea pesada, streaming e ingeniería de datos.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">2 en 1</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=500&auto=format&fit=crop" alt="Microsoft Surface Pro 11">
+            </div>
+            <div class="card-number">LP // 08</div>
+            <h3>Microsoft Surface Pro 11</h3>
+            <p>Dispositivo convertible premium con pantalla táctil desmontable de alta tasa de refresco, perfecto para diseño digital móvil y flujos ágiles de oficina.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Desarrollo</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=500&auto=format&fit=crop" alt="Framework Laptop 16">
+            </div>
+            <div class="card-number">LP // 09</div>
+            <h3>Framework Laptop 16</h3>
+            <p>Arquitectura de hardware completamente modular y reparable por el usuario, permitiendo actualizar puertos, tarjetas gráficas y componentes principales.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Creadores</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=500&auto=format&fit=crop" alt="ASUS ProArt P16">
+            </div>
+            <div class="card-number">LP // 10</div>
+            <h3>ASUS ProArt P16</h3>
+            <p>Estación móvil con software de calibración dedicado y dial físico integrado en el trackpad para agilizar el flujo de trabajo en herramientas de edición profesional.</p>
+        </div>
+
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">GPU</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=500&auto=format&fit=crop" alt="NVIDIA GeForce RTX 5090">
+            </div>
+            <div class="card-number">HW // 01</div>
+            <h3>NVIDIA GeForce RTX 5090</h3>
+            <p>Arquitectura Blackwell optimizada para supercomputación, trazado de rayos extremo y flujos masivos de redes neuronales artificiales de manera local.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">CPU</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500&auto=format&fit=crop" alt="AMD Ryzen 9 9950X">
+            </div>
+            <div class="card-number">HW // 02</div>
+            <h3>AMD Ryzen 9 9950X</h3>
+            <p>Procesamiento nativo Zen 5 enfocado a la computación en paralelo paralela, diseño estructural tridimensional y compilaciones de código complejas.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">SoC / ARM</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=500&auto=format&fit=crop" alt="Apple M4 Ultra">
+            </div>
+            <div class="card-number">HW // 03</div>
+            <h3>Apple M4 Ultra</h3>
+            <p>Procesador ultra-eficiente de arquitectura unificada diseñado para mitigar latencias críticas en la edición de contenido multimedia avanzado e IA local.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">CPU</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=500&auto=format&fit=crop" alt="Intel Core Ultra 9 285K">
+            </div>
+            <div class="card-number">HW // 04</div>
+            <h3>Intel Core Ultra 9 285K</h3>
+            <p>Arquitectura Arrow Lake provista de un acelerador NPU de cómputo inteligente dedicado a aliviar los hilos principales de trabajo del sistema.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Almacenamiento</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=500&auto=format&fit=crop" alt="Samsung 990 PRO Eco">
+            </div>
+            <div class="card-number">HW // 05</div>
+            <h3>Samsung 990 PRO Eco</h3>
+            <p>Dispositivo de estado sólido basado en PCIe 5.0 que maximiza las velocidades de lectura secuencial reduciendo las emisiones térmicas operativas.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Visualización</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=500&auto=format&fit=crop" alt="ASUS ROG Swift OLED">
+            </div>
+            <div class="card-number">HW // 06</div>
+            <h3>ASUS ROG Swift OLED</h3>
+            <p>Pantalla de alta fidelidad QD-OLED con refresco dinámico a 240Hz, contraste infinito y tiempos de respuesta instantáneos milimétricos.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Procesador ARM</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500&auto=format&fit=crop" alt="Qualcomm Snapdragon X Elite">
+            </div>
+            <div class="card-number">HW // 07</div>
+            <h3>Qualcomm Snapdragon X Elite</h3>
+            <p>Plataforma System on Chip que impulsa las arquitecturas portátiles ultraligeras balanceando ciclos de reloj agresivos y consumo de batería mínimo.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Computación Espacial</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=500&auto=format&fit=crop" alt="Meta Quest 3S">
+            </div>
+            <div class="card-number">HW // 08</div>
+            <h3>Meta Quest 3S</h3>
+            <p>Dispositivo autónomo de realidad mixta que procesa sensores espaciales tridimensionales interactivos en tiempo real sin requerir cableado externo.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Microordenador</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=500&auto=format&fit=crop" alt="Raspberry Pi 5">
+            </div>
+            <div class="card-number">HW // 09</div>
+            <h3>Raspberry Pi 5 (16GB)</h3>
+            <p>Placa integrada de tamaño reducido ideal para el despliegue de servidores domésticos perimetrales, controladores lógicos y proyectos embebidos.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Memoria RAM</div>
+            <div class="card-image-container">
+                <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=500&auto=format&fit=crop" alt="Corsair Dominator DDR5">
+            </div>
+            <div class="card-number">HW // 10</div>
+            <h3>Corsair Dominator DDR5</h3>
+            <p>Bancos de memoria DDR5 de alta velocidad configurados para perfiles de overclocking estables que evitan cuellos de botella informáticos.</p>
+        </div>
+
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">IDE</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Visual Studio Code">
+            </div>
+            <div class="card-number">SW // 01</div>
+            <h3>Visual Studio Code</h3>
+            <p>El editor de código fuente más popular del mundo. Ligero, altamente extensible y con integración nativa perfecta para Git y terminales.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Contenedores</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker">
+            </div>
+            <div class="card-number">SW // 02</div>
+            <h3>Docker</h3>
+            <p>Plataforma de empaquetado que permite aislar aplicaciones en contenedores livianos, garantizando que el código funcione igual en cualquier servidor.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Control de Versiones</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+            </div>
+            <div class="card-number">SW // 03</div>
+            <h3>GitHub</h3>
+            <p>Plataforma global de alojamiento para la gestión de proyectos y colaboración de código, integrando herramientas avanzadas de integración continua (CI/CD).</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Diseño UI/UX</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+            </div>
+            <div class="card-number">SW // 04</div>
+            <h3>Figma</h3>
+            <p>Herramienta colaborativa basada en la nube para diseñar interfaces de usuario y maquetar prototipos interactivos con transiciones dinámicas.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Base de Datos</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_lesseps.svg" alt="PostgreSQL">
+            </div>
+            <div class="card-number">SW // 05</div>
+            <h3>PostgreSQL</h3>
+            <p>Sistema de base de datos relacional de código abierto y nivel empresarial, famoso por su robustez, soporte de datos complejos y consultas óptimas.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Librería Web</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+            </div>
+            <div class="card-number">SW // 06</div>
+            <h3>React</h3>
+            <p>Biblioteca de JavaScript desarrollada por Meta enfocada en la creación de interfaces de usuario interactivas basadas en componentes reutilizables.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Lenguaje</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+            </div>
+            <div class="card-number">SW // 07</div>
+            <h3>Python</h3>
+            <p>Lenguaje de programación versátil e intuitivo, pilar fundamental en ciencia de datos, desarrollo de scripts y modelos avanzados de IA.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Servidor Cloud</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux">
+            </div>
+            <div class="card-number">SW // 08</div>
+            <h3>Linux (Ubuntu/Debian)</h3>
+            <p>El sistema operativo de código abierto preferido para entornos de servidor, proporcionando una base altamente segura, estable y escalable.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Orquestación</div>
+            <div class="card-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes">
+            </div>
+            <div class="card-number">SW // 09</div>
+            <h3>Kubernetes</h3>
+            <p>Plataforma de orquestación de código abierto diseñada para automatizar el despliegue, el escalado y la gestión de aplicaciones en contenedores.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Panel Técnico Interactivo Avanzado - Proyecto 2026</p>
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('search-input');
+        const filterButtons = document.querySelectorAll('.btn');
+        const cards = document.querySelectorAll('.card');
+        const noResults = document.getElementById('no-results');
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        function filterTech() {
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const matchesFilter = currentFilter === 'all' || card.getAttribute('data-type') === currentFilter;
+                
+                const h3Element = card.querySelector('h3');
+                const pElement = card.querySelector('p');
+                const titleText = h3Element ? h3Element.innerText.toLowerCase() : '';
+                const descText = pElement ? pElement.innerText.toLowerCase() : '';
+                
+                const matchesSearch = titleText.includes(currentSearch) || descText.includes(currentSearch);
+
+                if (matchesFilter && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                currentSearch = e.target.value.toLowerCase();
+                filterTech();
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                currentFilter = button.getAttribute('data-filter');
+                filterTech();
+            });
+        });
+
+        filterTech();
+    });
+</script>
+
+</body>
+</html>
