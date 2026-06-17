@@ -1,521 +1,652 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanguardia Tecnológica Pro | Laptops, Hardware & Software</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-gradient: linear-gradient(-45deg, #060913, #0b1120, #161233, #02040a);
-            --card-bg: rgba(22, 32, 51, 0.6);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            
-            /* Colores de acento por categoría */
-            --accent-lp: #bf55ec; /* Morado para Laptops */
-            --accent-lp-glow: rgba(191, 85, 236, 0.15);
-            --accent-hw: #00f2fe; /* Cian para Hardware */
-            --accent-hw-glow: rgba(0, 242, 254, 0.15);
-            --accent-sw: #4ade80; /* Verde para Software */
-            --accent-sw-glow: rgba(74, 222, 128, 0.15);
-            
-            --border-color: rgba(255, 255, 255, 0.06);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguardia Tecnológica Pro | Laptops, Hardware & Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(-45deg, #060913, #0b1120, #161233, #02040a);
+            --card-bg: rgba(22, 32, 51, 0.6);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            
+            /* Colores de acento por categoría */
+            --accent-lp: #bf55ec; /* Morado para Laptops */
+            --accent-lp-glow: rgba(191, 85, 236, 0.15);
+            --accent-hw: #00f2fe; /* Cian para Hardware */
+            --accent-hw-glow: rgba(0, 242, 254, 0.15);
+            --accent-sw: #4ade80; /* Verde para Software */
+            --accent-sw-glow: rgba(74, 222, 128, 0.15);
+            
+            --border-color: rgba(255, 255, 255, 0.06);
+        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--bg-gradient);
-            background-size: 400% 400%;
-            animation: gradientBg 12s ease infinite;
-            color: var(--text-main);
-            min-height: 100vh;
-            padding: 3rem 1.5rem;
-        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: gradientBg 12s ease infinite;
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+        }
 
-        @keyframes gradientBg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes gradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInDown 0.8s ease-out;
-        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
 
-        header h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 0.8rem;
-            background: linear-gradient(135deg, var(--accent-lp), var(--accent-hw), var(--accent-sw));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-        }
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(135deg, var(--accent-lp), var(--accent-hw), var(--accent-sw));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
 
-        header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-        .controls-panel {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid var(--border-color);
-            padding: 1.2rem;
-            border-radius: 16px;
-            margin-bottom: 3rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-            justify-content: space-between;
-            animation: fadeIn 1s ease-out;
-        }
+        .controls-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            padding: 1.2rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            animation: fadeIn 1s ease-out;
+        }
 
-        .search-box {
-            flex: 1;
-            min-width: 280px;
-            position: relative;
-        }
+        .search-box {
+            flex: 1;
+            min-width: 280px;
+            position: relative;
+        }
 
-        .search-box input {
-            width: 100%;
-            padding: 0.8rem 1.2rem;
-            background: rgba(2, 6, 23, 0.5);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            background: rgba(2, 6, 23, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-        .search-box input:focus {
-            border-color: #6366f1;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
-        }
+        .search-box input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+        }
 
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
 
-        .btn {
-            padding: 0.7rem 1.4rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .btn {
+            padding: 0.7rem 1.4rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        .btn:hover {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.1);
-        }
+        .btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-        .btn.active[data-filter="all"] { border-color: #6366f1; color: #a5b4fc; background: rgba(99, 102, 241, 0.1); }
-        .btn.active[data-filter="laptops"] { border-color: var(--accent-lp); color: var(--accent-lp); background: rgba(191, 85, 236, 0.1); }
-        .btn.active[data-filter="hardware"] { border-color: var(--accent-hw); color: var(--accent-hw); background: rgba(0, 242, 254, 0.1); }
-        .btn.active[data-filter="software"] { border-color: var(--accent-sw); color: var(--accent-sw); background: rgba(74, 222, 128, 0.1); }
+        .btn.active[data-filter="all"] { border-color: #6366f1; color: #a5b4fc; background: rgba(99, 102, 241, 0.1); }
+        .btn.active[data-filter="laptops"] { border-color: var(--accent-lp); color: var(--accent-lp); background: rgba(191, 85, 236, 0.1); }
+        .btn.active[data-filter="hardware"] { border-color: var(--accent-hw); color: var(--accent-hw); background: rgba(0, 242, 254, 0.1); }
+        .btn.active[data-filter="software"] { border-color: var(--accent-sw); color: var(--accent-sw); background: rgba(74, 222, 128, 0.1); }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 1.8rem;
-            margin-bottom: 4rem;
-        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 4rem;
+        }
 
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2rem;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
-            display: flex;
-            flex-direction: column;
-        }
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+            display: flex;
+            flex-direction: column;
+        }
 
-        .card.hidden {
-            display: none !important;
-        }
+        .card.hidden {
+            display: none !important;
+        }
 
-        .card.laptops:hover { transform: translateY(-6px); border-color: var(--accent-lp); box-shadow: 0 10px 25px var(--accent-lp-glow); }
-        .card.hardware:hover { transform: translateY(-6px); border-color: var(--accent-hw); box-shadow: 0 10px 25px var(--accent-hw-glow); }
-        .card.software:hover { transform: translateY(-6px); border-color: var(--accent-sw); box-shadow: 0 10px 25px var(--accent-sw-glow); }
+        .card.laptops:hover { transform: translateY(-6px); border-color: var(--accent-lp); box-shadow: 0 10px 25px var(--accent-lp-glow); }
+        .card.hardware:hover { transform: translateY(-6px); border-color: var(--accent-hw); box-shadow: 0 10px 25px var(--accent-hw-glow); }
+        .card.software:hover { transform: translateY(-6px); border-color: var(--accent-sw); box-shadow: 0 10px 25px var(--accent-sw-glow); }
 
-        .card-image-container {
-            width: 100%;
-            height: 160px;
-            border-radius: 10px;
-            margin-bottom: 1.2rem;
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+        /* Contenedor de Imagen adaptado para Iconos de alta tecnología */
+        .card-image-container {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            margin-bottom: 1.2rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            transition: all 0.3s ease;
+        }
 
-        .card-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
+        .laptops .card-image-container { color: var(--accent-lp); text-shadow: 0 0 15px var(--accent-lp-glow); }
+        .hardware .card-image-container { color: var(--accent-hw); text-shadow: 0 0 15px var(--accent-hw-glow); }
+        .software .card-image-container { color: var(--accent-sw); text-shadow: 0 0 15px var(--accent-sw-glow); }
 
-        .card:hover .card-image-container img {
-            transform: scale(1.06);
-        }
+        .card:hover .card-image-container {
+            transform: scale(1.03);
+            background: rgba(0, 0, 0, 0.4);
+        }
 
-        .card-badge {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.3rem 0.7rem;
-            border-radius: 8px;
-            z-index: 2;
-        }
+        .card-badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            z-index: 2;
+        }
 
-        .laptops .card-badge { background: rgba(191, 85, 236, 0.65); color: var(--text-main); backdrop-filter: blur(4px); }
-        .hardware .card-badge { background: rgba(0, 242, 254, 0.65); color: #02040a; backdrop-filter: blur(4px); }
-        .software .card-badge { background: rgba(74, 222, 128, 0.65); color: #02040a; backdrop-filter: blur(4px); }
+        .laptops .card-badge { background: rgba(191, 85, 236, 0.15); color: var(--accent-lp); backdrop-filter: blur(4px); }
+        .hardware .card-badge { background: rgba(0, 242, 254, 0.15); color: var(--accent-hw); backdrop-filter: blur(4px); }
+        .software .card-badge { background: rgba(74, 222, 128, 0.15); color: var(--accent-sw); backdrop-filter: blur(4px); }
 
-        .card-number {
-            font-family: monospace;
-            font-size: 1.2rem;
-            font-weight: bold;
-            opacity: 0.25;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-        }
+        .card-number {
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0.15;
+            margin-bottom: 0.5rem;
+        }
 
-        .card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
 
-        #no-results {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            display: none;
-            width: 100%;
-            grid-column: 1 / -1;
-        }
+        #no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            display: none;
+            width: 100%;
+            grid-column: 1 / -1;
+        }
 
-        footer {
-            text-align: center;
-            margin-top: 5rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            padding: 2rem 0;
-        }
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; } to { opacity: 1; }
-        }
-    </style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
 
-    <header>
-        <h1>Vanguardia Tecnológica</h1>
-        <p>Explora de forma interactiva nuestro catálogo técnico especializado: Computadoras portátiles de alto rendimiento, componentes de hardware avanzados y herramientas esenciales de desarrollo de software.</p>
-    </header>
+    <header>
+        <h1>Vanguardia Tecnológica</h1>
+        <p>Explora de forma interactiva nuestro catálogo técnico especializado: Computadoras portátiles de alto rendimiento, componentes de hardware avanzados y herramientas esenciales de desarrollo de software.</p>
+    </header>
 
-    <div class="controls-panel">
-        <div class="filter-buttons">
-            <button class="btn active" data-filter="all">Todo</button>
-            <button class="btn" data-filter="laptops">💻 Laptops</button>
-            <button class="btn" data-filter="hardware">⚙️ Hardware</button>
-            <button class="btn" data-filter="software">🛠️ Software</button>
-        </div>
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Buscar laptop, componente o herramienta...">
-        </div>
-    </div>
+    <div class="controls-panel">
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">Todo</button>
+            <button class="btn" data-filter="laptops">💻 Laptops</button>
+            <button class="btn" data-filter="hardware">⚙️ Hardware</button>
+            <button class="btn" data-filter="software">🛠️ Software</button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar laptop, componente o herramienta...">
+        </div>
+    </div>
 
-    <div class="grid" id="tech-grid">
-        
-        <div id="no-results">No se encontraron elementos que coincidan con tu búsqueda.</div>
+    <div class="grid" id="tech-grid">
+        
+        <div id="no-results">No se encontraron elementos que coincidan con tu búsqueda.</div>
 
-        <div class="card laptops" data-type="laptops">
-            <div class="card-badge">Ultrabook</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop&q=60" alt="MacBook Pro M4 Max"></div>
-            <div class="card-number">LP // 01</div>
-            <h3>MacBook Pro M4 Max</h3>
-            <p>Estación de trabajo ultraportátil optimizada para renderizado masivo, flujos de desarrollo complejos y una eficiencia energética de nivel superior en arquitectura ARM.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Ultrabook</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-laptop"></i>
+            </div>
+            <div class="card-number">LP // 01</div>
+            <h3>MacBook Pro M4 Max</h3>
+            <p>Estación de trabajo ultraportátil optimizada para renderizado masivo, flujos de desarrollo complejos y una eficiencia energética de nivel superior en arquitectura ARM.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">GPU</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&auto=format&fit=crop&q=60" alt="NVIDIA GeForce RTX 5090"></div>
-            <div class="card-number">HW // 01</div>
-            <h3>NVIDIA GeForce RTX 5090</h3>
-            <p>Arquitectura Blackwell optimizada para supercomputación, trazado de rayos extremo y flujos masivos de redes neuronales artificiales de manera local.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Gaming Pro</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="card-number">LP // 02</div>
+            <h3>ASUS ROG Zephyrus G16</h3>
+            <p>Portátil gaming de alta gama equipado con gráficos dedicados de última generación, pantalla OLED de nivel competitivo y un chasis de aluminio mecanizado.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">CPU</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=500&auto=format&fit=crop&q=60" alt="AMD Ryzen 9 9950X"></div>
-            <div class="card-number">HW // 02</div>
-            <h3>AMD Ryzen 9 9950X</h3>
-            <p>Procesamiento nativo Zen 5 enfocado a la computación paralela, diseño estructural tridimensional y compilaciones de código complejas.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Productividad</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <div class="card-number">LP // 03</div>
+            <h3>Dell XPS 14 Pro</h3>
+            <p>Diseño industrial minimalista con pantalla InfinityEdge de alta resolución, enfocado en creadores de contenido y profesionales que requieren máxima fidelidad de color.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">CPU</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1632558357907-333e691230e9?w=500&auto=format&fit=crop&q=60" alt="Intel Core i9-14900KS"></div>
-            <div class="card-number">HW // 11</div>
-            <h3>Intel Core i9-14900KS</h3>
-            <p>Procesador de edición especial capaz de alcanzar frecuencias turbo extremas, diseñado para entusiastas del overclocking y estaciones de trabajo de alto rendimiento.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Empresarial</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="card-number">LP // 04</div>
+            <h3>Lenovo ThinkPad X1 Carbon</h3>
+            <p>El estándar de la industria en seguridad corporativa y durabilidad estructural, construido en fibra de carbono con teclado ergonómico de alta respuesta.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">CPU</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1587202372634-32205c091fc0?w=500&auto=format&fit=crop&q=60" alt="AMD Threadripper 7980X"></div>
-            <div class="card-number">HW // 12</div>
-            <h3>AMD Threadripper 7980X</h3>
-            <p>El estándar para estaciones de trabajo profesionales, con 64 núcleos de procesamiento masivo para renderizado 3D y edición de video en 8K.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Gaming Premium</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="card-number">LP // 05</div>
+            <h3>Razer Blade 16</h3>
+            <p>Rendimiento gráfico extremo sin comprometer el grosor, integrando un panel Dual-Mode Mini-LED capaz de alternar resoluciones según la carga de trabajo.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">Memoria RAM</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1562976540-1502c214d386?w=500&auto=format&fit=crop&q=60" alt="G.Skill Trident Z5 RGB"></div>
-            <div class="card-number">HW // 13</div>
-            <h3>G.Skill Trident Z5 RGB</h3>
-            <p>Memoria DDR5 de alta velocidad con latencias optimizadas y disipación de calor mediante aletas de aluminio premium para estabilidad total.</p>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Copilot+ PC</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="card-number">LP // 06</div>
+            <h3>HP OmniBook X</h3>
+            <p>Nueva generación de portátiles inteligentes impulsados por procesadores Snapdragon ARM con acelerador neuronal NPU dedicado a tareas de inteligencia artificial nativa.</p>
+        </div>
 
-        <div class="card hardware" data-type="hardware">
-            <div class="card-badge">Memoria RAM</div>
-            <div class="card-image-container"><img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&auto=format&fit=crop&q=60" alt="Crucial Pro DDR5"></div>
-            <div class="card-number">HW // 14</div>
-            <h3>Crucial Pro DDR5 96GB</h3>
-            <p>Kit de alta densidad diseñado para entornos empresariales y científicos, ofreciendo fiabilidad extrema y corrección de errores ECC integrada.</p>
-        </div>
-        </div>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Calidad / Precio</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div class="card-number">LP // 07</div>
+            <h3>Lenovo Legion Pro 5</h3>
+            <p>Equilibrio térmico avanzado Coldfront y procesamiento híbrido de alto rendimiento adaptado para multitarea pesada, streaming e ingeniería de datos.</p>
+        </div>
 
-    <footer>
-        <p>Panel Técnico Interactivo Avanzado - Proyecto 2026</p>
-    </footer>
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">2 en 1</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-tablet-screen-button"></i>
+            </div>
+            <div class="card-number">LP // 08</div>
+            <h3>Microsoft Surface Pro 11</h3>
+            <p>Dispositivo convertible premium con pantalla táctil desmontable de alta tasa de refresco, perfecto para diseño digital móvil y flujos ágiles de oficina.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Desarrollo</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div class="card-number">LP // 09</div>
+            <h3>Framework Laptop 16</h3>
+            <p>Arquitectura de hardware completamente modular y reparable por el usuario, permitiendo actualizar puertos, tarjetas gráficas y componentes principales.</p>
+        </div>
+
+        <div class="card laptops" data-type="laptops">
+            <div class="card-badge">Creadores</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="card-number">LP // 10</div>
+            <h3>ASUS ProArt P16</h3>
+            <p>Estación móvil con software de calibración dedicado y dial físico integrado en el trackpad para agilizar el flujo de trabajo en herramientas de edición profesional.</p>
+        </div>
+
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">GPU</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="card-number">HW // 01</div>
+            <h3>NVIDIA GeForce RTX 5090</h3>
+            <p>Arquitectura Blackwell optimizada para supercomputación, trazado de rayos extremo y flujos masivos de redes neuronales artificiales de manera local.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">CPU</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="card-number">HW // 02</div>
+            <h3>AMD Ryzen 9 9950X</h3>
+            <p>Procesamiento nativo Zen 5 enfocado a la computación en paralelo paralela, diseño estructural tridimensional y compilaciones de código complejas.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">SoC / ARM</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-circle-nodes"></i>
+            </div>
+            <div class="card-number">HW // 03</div>
+            <h3>Apple M4 Ultra</h3>
+            <p>Procesador ultra-eficiente de arquitectura unificada diseñado para mitigar latencias críticas en la edición de contenido multimedia avanzado e IA local.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">CPU</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="card-number">HW // 04</div>
+            <h3>Intel Core Ultra 9 285K</h3>
+            <p>Arquitectura Arrow Lake provista de un acelerador NPU de cómputo inteligente dedicado a aliviar los hilos principales de trabajo del sistema.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Almacenamiento</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="card-number">HW // 05</div>
+            <h3>Samsung 990 PRO Eco</h3>
+            <p>Dispositivo de estado sólido basado en PCIe 5.0 que maximiza las velocidades de lectura secuencial reduciendo las emisiones térmicas operativas.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Visualización</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-desktop"></i>
+            </div>
+            <div class="card-number">HW // 06</div>
+            <h3>ASUS ROG Swift OLED</h3>
+            <p>Pantalla de alta fidelidad QD-OLED con refresco dinámico a 240Hz, contraste infinito y tiempos de respuesta instantáneos milimétricos.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Procesador ARM</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <div class="card-number">HW // 07</div>
+            <h3>Qualcomm Snapdragon X Elite</h3>
+            <p>Plataforma System on Chip que impulsa las arquitecturas portátiles ultraligeras balanceando ciclos de reloj agresivos y consumo de batería mínimo.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Computación Espacial</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-vr-cardboard"></i>
+            </div>
+            <div class="card-number">HW // 08</div>
+            <h3>Meta Quest 3S</h3>
+            <p>Dispositivo autónomo de realidad mixta que procesa sensores espaciales tridimensionales interactivos en tiempo real sin requerir cableado externo.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Microordenador</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="card-number">HW // 09</div>
+            <h3>Raspberry Pi 5 (16GB)</h3>
+            <p>Placa integrada de tamaño reducido ideal para el despliegue de servidores domésticos perimetrales, controladores lógicos y proyectos embebidos.</p>
+        </div>
+
+        <div class="card hardware" data-type="hardware">
+            <div class="card-badge">Memoria RAM</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-memory"></i>
+            </div>
+            <div class="card-number">HW // 10</div>
+            <h3>Corsair Dominator DDR5</h3>
+            <p>Bancos de memoria DDR5 de alta velocidad configurados para perfiles de overclocking estables que evitan cuellos de bottlenecks informáticos.</p>
+        </div>
+
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Entorno</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="card-number">SW // 01</div>
+            <h3>Visual Studio Code</h3>
+            <p>Editor extensible multiplataforma que unifica la gestión de proyectos de desarrollo mediante ecosistemas de extensiones globales integrados.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Infraestructura</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-box-open"></i>
+            </div>
+            <div class="card-number">SW // 02</div>
+            <h3>Docker & Kubernetes</h3>
+            <p>Ecosistema estandarizado de automatización de entornos lógicos que facilita la escalabilidad de software y microservicios modulares cloud.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Asistente IA</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="card-number">SW // 03</div>
+            <h3>Cursor AI</h3>
+            <p>IDE de desarrollo enfocado en la programación asistida por lenguajes predictivos de IA profunda integrados de forma nativa en los archivos locales.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Diseño</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-bezier-curve"></i>
+            </div>
+            <div class="card-number">SW // 04</div>
+            <h3>Figma</h3>
+            <p>Espacio de trabajo vectorial cooperativo en la nube orientado al diseño estructural interactivo de interfaces de usuario para web y móvil.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Base de Datos</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-table"></i>
+            </div>
+            <div class="card-number">SW // 05</div>
+            <h3>PostgreSQL 17</h3>
+            <p>Motor de almacenamiento relacional de nivel corporativo adaptado para manejar consultas indexadas analíticas masivas y estructuras JSON hibridas.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Framework</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="card-number">SW // 06</div>
+            <h3>Next.js 15</h3>
+            <p>Estructura full-stack basada en librerías React que automatiza el renderizado híbrido del lado del servidor para maximizar la velocidad web.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Gráficos 3D</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-cube"></i>
+            </div>
+            <div class="card-number">SW // 07</div>
+            <h3>Blender 4.x</h3>
+            <p>Suite de código abierto para la generación matemática de modelos tridimensionales, animaciones de físicas complejas y renderizado procedural.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Plataforma</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
+            <div class="card-number">SW // 08</div>
+            <h3>Fedora / Ubuntu Server</h3>
+            <p>Sistemas operativos UNIX robustos esenciales para el alojamiento de arquitecturas en la nube, contenedores estables y sistemas globales.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Modelado IA</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="card-number">SW // 09</div>
+            <h3>Claude 3.5 Sonnet</h3>
+            <p>Algoritmo inteligente avanzado con alta comprensión semántica especializado en optimizar lógicas matemáticas, refactorización y depuración de bugs.</p>
+        </div>
+
+        <div class="card software" data-type="software">
+            <div class="card-badge">Organización</div>
+            <div class="card-image-container">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="card-number">SW // 10</div>
+            <h3>Obsidian</h3>
+            <p>Gestor de conocimiento que mapea datos lógicos interconectados en archivos planos Markdown, protegiendo la privacidad de la información.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Panel Técnico Interactivo Avanzado - Proyecto 2026</p>
+    </footer>
 
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const searchInput = document.getElementById('search-input');
-        const filterButtons = document.querySelectorAll('.btn');
-        const cards = document.querySelectorAll('.card');
-        const noResults = document.getElementById('no-results');
+    const searchInput = document.getElementById('search-input');
+    const filterButtons = document.querySelectorAll('.btn');
+    const cards = document.querySelectorAll('.card');
+    const noResults = document.getElementById('no-results');
 
-        let currentFilter = 'all';
-        let currentSearch = '';
+    let currentFilter = 'all';
+    let currentSearch = '';
 
-        function filterTech() {
-            let visibleCount = 0;
+    function filterTech() {
+        let visibleCount = 0;
 
-            cards.forEach(card => {
-                const matchesFilter = currentFilter === 'all' || card.getAttribute('data-type') === currentFilter;
-                
-                const h3Element = card.querySelector('h3');
-                const pElement = card.querySelector('p');
-                const titleText = h3Element ? h3Element.innerText.toLowerCase() : '';
-                const descText = pElement ? pElement.innerText.toLowerCase() : '';
-                
-                const matchesSearch = titleText.includes(currentSearch) || descText.includes(currentSearch);
+        cards.forEach(card => {
+            const matchesFilter = currentFilter === 'all' || card.getAttribute('data-type') === currentFilter;
+            
+            const h3Element = card.querySelector('h3');
+            const pElement = card.querySelector('p');
+            const titleText = h3Element ? h3Element.innerText.toLowerCase() : '';
+            const descText = pElement ? pElement.innerText.toLowerCase() : '';
+            
+            const matchesSearch = titleText.includes(currentSearch) || descText.includes(currentSearch);
 
-                if (matchesFilter && matchesSearch) {
-                    card.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
+            if (matchesFilter && matchesSearch) {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
 
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
-            }
-        }
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    }
 
-        if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                currentSearch = e.target.value.toLowerCase();
-                filterTech();
-            });
-        }
+    searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value.toLowerCase();
+        filterTech();
+    });
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                currentFilter = button.getAttribute('data-filter');
-                filterTech();
-            });
-        });
-    });
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            currentFilter = button.getAttribute('data-filter');
+            filterTech();
+        });
+    });
+
+    filterTech();
 </script>
 
 </body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanguardia Tecnológica Pro | Software Catalog</title>
-    <style>
-        :root {
-            --bg-gradient: linear-gradient(-45deg, #060913, #0b1120, #161233, #02040a);
-            --card-bg: rgba(22, 32, 51, 0.6);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-sw: #4ade80;
-            --border-color: rgba(255, 255, 255, 0.06);
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-gradient); color: var(--text-main); min-height: 100vh; padding: 3rem 1.5rem; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.8rem; }
-        
-        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-5px); }
-        
-        .card-image-container { 
-            width: 100%; height: 150px; border-radius: 10px; margin-bottom: 1.2rem;
-            background: rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center; overflow: hidden;
-        }
-        .card-image-container img { max-width: 70%; max-height: 70%; object-fit: contain; }
-        
-        .card-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--accent-sw); background: rgba(74, 222, 128, 0.15); padding: 0.3rem 0.7rem; border-radius: 8px; width: fit-content; margin-bottom: 1rem; }
-        .card h3 { font-size: 1.35rem; margin-bottom: 0.8rem; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <div class="grid">
-        <div class="card">
-            <div class="card-badge">Entorno</div>
-            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFI-pniSXDIyK76qQHOH1vxs18YxVa_-tYLe7w1blL2g&s=10" alt="VS Code"></div>
-            <h3>Visual Studio Code</h3>
-            <p>Editor extensible multiplataforma para desarrollo moderno.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Infraestructura</div>
-            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJDfHODa-NkOSEyLqy3BfFb_n7BZYC4cWnvw2POBW5g&s=10" alt="Docker"></div>
-            <h3>Docker & Kubernetes</h3>
-            <p>Automatización de contenedores y microservicios.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Asistente IA</div>
-            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTH1WX9oe9ojmJmaATQtHIxtQcWougov1sZ9aD7t7Og&s=10" alt="Cursor"></div>
-            <h3>Cursor AI</h3>
-            <p>IDE con IA profunda integrada localmente.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Diseño</div>
-            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLByr5oMJbeROvPhUgh_TpfRT1v3Zi9RuYjGcVMLmlPA&s=10" alt="Figma"></div>
-            <h3>Figma</h3>
-            <p>Herramienta colaborativa de diseño de interfaces.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Base de Datos</div>
-            <div class="card-image-container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLTV_h9u9QfAf3qIWiLuX2wWRpyqaGOKxqvdxJc7jWeg&s=10" alt="PostgreSQL"></div>
-            <h3>PostgreSQL 17</h3>
-            <p>Sistema de gestión de bases de datos relacionales.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Framework</div>
-            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Next.js"></div>
-            <h3>Next.js 15</h3>
-            <p>Framework React para renderizado híbrido.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Gráficos 3D</div>
-            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Blender"></div>
-            <h3>Blender 4.x</h3>
-            <p>Suite de creación 3D de código abierto.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Plataforma</div>
-            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Linux"></div>
-            <h3>Ubuntu Server</h3>
-            <p>Sistema operativo robusto para servidores.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Modelado IA</div>
-            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Claude"></div>
-            <h3>Claude 3.5</h3>
-            <p>Modelo de lenguaje avanzado para razonamiento.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-badge">Organización</div>
-            <div class="card-image-container"><img src="https://via.placeholder.com/150" alt="Obsidian"></div>
-            <h3>Obsidian</h3>
-            <p>Gestor de conocimiento basado en Markdown.</p>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+</html> asi dejalo como esta solo cambia los logos por imagenes 
