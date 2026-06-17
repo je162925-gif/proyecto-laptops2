@@ -188,7 +188,7 @@
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 1.2rem;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
@@ -200,6 +200,12 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+        }
+
+        /* Estilo especial para logos de software para que no se corten */
+        .software .card-image-container img {
+            object-fit: contain;
+            padding: 1.5rem;
         }
 
         .card:hover .card-image-container img {
@@ -299,7 +305,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Ultrabook</div>
             <div class="card-image-container">
-                <img src="" alt="MacBook Pro M4 Max">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="MacBook Pro M4 Max">
             </div>
             <div class="card-number">LP // 01</div>
             <h3>MacBook Pro M4 Max</h3>
@@ -309,7 +315,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Gaming Pro</div>
             <div class="card-image-container">
-                <img src="" alt="ASUS ROG Zephyrus G16">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80" alt="ASUS ROG Zephyrus G16">
             </div>
             <div class="card-number">LP // 02</div>
             <h3>ASUS ROG Zephyrus G16</h3>
@@ -319,7 +325,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Productividad</div>
             <div class="card-image-container">
-                <img src="" alt="Dell XPS 14 Pro">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="Dell XPS 14 Pro">
             </div>
             <div class="card-number">LP // 03</div>
             <h3>Dell XPS 14 Pro</h3>
@@ -328,10 +334,10 @@
 
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Empresarial</div>
-            <div class="card-number">LP // 04</div>
             <div class="card-image-container">
-                <img src="" alt="Lenovo ThinkPad X1 Carbon">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" alt="Lenovo ThinkPad X1 Carbon">
             </div>
+            <div class="card-number">LP // 04</div>
             <h3>Lenovo ThinkPad X1 Carbon</h3>
             <p>El estándar de la industria en seguridad corporativa y durabilidad estructural, construido en fibra de carbono con teclado ergonómico de alta respuesta.</p>
         </div>
@@ -339,7 +345,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Gaming Premium</div>
             <div class="card-image-container">
-                <img src="" alt="Razer Blade 16">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80" alt="Razer Blade 16">
             </div>
             <div class="card-number">LP // 05</div>
             <h3>Razer Blade 16</h3>
@@ -349,7 +355,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Copilot+ PC</div>
             <div class="card-image-container">
-                <img src="" alt="HP OmniBook X">
+                <img src="https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?auto=format&fit=crop&w=600&q=80" alt="HP OmniBook X">
             </div>
             <div class="card-number">LP // 06</div>
             <h3>HP OmniBook X</h3>
@@ -359,7 +365,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Calidad / Precio</div>
             <div class="card-image-container">
-                <img src="" alt="Lenovo Legion Pro 5">
+                <img src="https://images.unsplash.com/photo-1558885561-56c2a0915266?auto=format&fit=crop&w=600&q=80" alt="Lenovo Legion Pro 5">
             </div>
             <div class="card-number">LP // 07</div>
             <h3>Lenovo Legion Pro 5</h3>
@@ -369,7 +375,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">2 en 1</div>
             <div class="card-image-container">
-                <img src="" alt="Microsoft Surface Pro 11">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" alt="Microsoft Surface Pro 11">
             </div>
             <div class="card-number">LP // 08</div>
             <h3>Microsoft Surface Pro 11</h3>
@@ -379,7 +385,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Desarrollo</div>
             <div class="card-image-container">
-                <img src="" alt="Framework Laptop 16">
+                <img src="https://images.unsplash.com/photo-1544006659-f0840bb74c94?auto=format&fit=crop&w=600&q=80" alt="Framework Laptop 16">
             </div>
             <div class="card-number">LP // 09</div>
             <h3>Framework Laptop 16</h3>
@@ -389,7 +395,7 @@
         <div class="card laptops" data-type="laptops">
             <div class="card-badge">Creadores</div>
             <div class="card-image-container">
-                <img src="" alt="ASUS ProArt P16">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=600&q=80" alt="ASUS ProArt P16">
             </div>
             <div class="card-number">LP // 10</div>
             <h3>ASUS ProArt P16</h3>
@@ -501,7 +507,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Entorno</div>
             <div class="card-image-container">
-                <img src="" alt="Visual Studio Code">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Visual Studio Code">
             </div>
             <div class="card-number">SW // 01</div>
             <h3>Visual Studio Code</h3>
@@ -511,7 +517,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Infraestructura</div>
             <div class="card-image-container">
-                <img src="" alt="Docker & Kubernetes">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker & Kubernetes">
             </div>
             <div class="card-number">SW // 02</div>
             <h3>Docker & Kubernetes</h3>
@@ -521,7 +527,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Asistente IA</div>
             <div class="card-image-container">
-                <img src="" alt="Cursor AI">
+                <img src="https://mintlify.s3-us-west-1.amazonaws.com/cursor/logo/dark.svg" alt="Cursor AI">
             </div>
             <div class="card-number">SW // 03</div>
             <h3>Cursor AI</h3>
@@ -531,7 +537,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Diseño</div>
             <div class="card-image-container">
-                <img src="" alt="Figma">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
             </div>
             <div class="card-number">SW // 04</div>
             <h3>Figma</h3>
@@ -541,7 +547,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Base de Datos</div>
             <div class="card-image-container">
-                <img src="" alt="PostgreSQL 17">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_lesseps.svg" alt="PostgreSQL 17">
             </div>
             <div class="card-number">SW // 05</div>
             <h3>PostgreSQL 17</h3>
@@ -551,7 +557,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Framework</div>
             <div class="card-image-container">
-                <img src="" alt="Next.js 15">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js 15">
             </div>
             <div class="card-number">SW // 06</div>
             <h3>Next.js 15</h3>
@@ -561,7 +567,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Gráficos 3D</div>
             <div class="card-image-container">
-                <img src="" alt="Blender 4.x">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender 4.x">
             </div>
             <div class="card-number">SW // 07</div>
             <h3>Blender 4.x</h3>
@@ -571,7 +577,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Plataforma</div>
             <div class="card-image-container">
-                <img src="" alt="Fedora / Ubuntu Server">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux Server">
             </div>
             <div class="card-number">SW // 08</div>
             <h3>Fedora / Ubuntu Server</h3>
@@ -581,7 +587,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Modelado IA</div>
             <div class="card-image-container">
-                <img src="" alt="Claude 3.5 Sonnet">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Anthropic_logo.svg" alt="Claude 3.5 Sonnet">
             </div>
             <div class="card-number">SW // 09</div>
             <h3>Claude 3.5 Sonnet</h3>
@@ -591,7 +597,7 @@
         <div class="card software" data-type="software">
             <div class="card-badge">Organización</div>
             <div class="card-image-container">
-                <img src="" alt="Obsidian">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Obsidian_logo.svg" alt="Obsidian">
             </div>
             <div class="card-number">SW // 10</div>
             <h3>Obsidian</h3>
@@ -608,59 +614,3 @@
 
 <script>
     const searchInput = document.getElementById('search-input');
-    const filterButtons = document.querySelectorAll('.btn');
-    const cards = document.querySelectorAll('.card');
-    const noResults = document.getElementById('no-results');
-
-    let currentFilter = 'all';
-    let currentSearch = '';
-
-    function filterTech() {
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-            const matchesFilter = currentFilter === 'all' || card.getAttribute('data-type') === currentFilter;
-            
-            const h3Element = card.querySelector('h3');
-            const pElement = card.querySelector('p');
-            const titleText = h3Element ? h3Element.innerText.toLowerCase() : '';
-            const descText = pElement ? pElement.innerText.toLowerCase() : '';
-            
-            const matchesSearch = titleText.includes(currentSearch) || descText.includes(currentSearch);
-
-            if (matchesFilter && matchesSearch) {
-                card.classList.remove('hidden');
-                visibleCount++;
-            } else {
-                card.classList.add('hidden');
-            }
-        });
-
-        if (visibleCount === 0) {
-            noResults.style.display = 'block';
-        } else {
-            noResults.style.display = 'none';
-        }
-    }
-
-    searchInput.addEventListener('input', (e) => {
-        currentSearch = e.target.value.toLowerCase();
-        filterTech();
-    });
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            currentFilter = button.getAttribute('data-filter');
-            filterTech();
-        });
-    });
-
-    // Carga inicial
-    filterTech();
-</script>
-
-</body>
-</html>
