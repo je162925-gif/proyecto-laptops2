@@ -126,3 +126,15 @@
             border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn.active[data-filter="all"] { border-color: #6366f1; color: #a5b4fc; background: rgba(99, 102, 241, 0.1); }
+        .btn.active[data-filter="laptops"] { border-color: var(--accent-lp); color: var(--accent-lp); background: rgba(191, 85, 236, 0.1); }
+        .btn.active
